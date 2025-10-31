@@ -11,7 +11,10 @@
       "mcp__chrome-devtools__hover",
       "mcp__chrome-devtools__click",
       "Bash(git push:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(curl:*)",
+      "mcp__chrome-devtools__evaluate_script"
     ],
     "deny": [],
     "ask": []

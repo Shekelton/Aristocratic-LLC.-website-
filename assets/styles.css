@@ -881,21 +881,18 @@ footer a:hover {
   flex-wrap: wrap;
 }
 
-/* Asymmetric Card Layout */
+/* Three-Column Card Layout */
 .about-cards-asym {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: calc(var(--spacing-unit) * 5);
-  align-items: start;
+  grid-template-columns: repeat(3, 1fr);
+  gap: calc(var(--spacing-unit) * 4);
+  align-items: stretch;
   margin: calc(var(--spacing-unit) * 6) auto;
-  max-width: 1100px;
+  max-width: 1200px;
 }
 
 /* Individual About Cards */
 .about-card-adv {
-  flex: 1 1 300px;
-  min-width: 280px;
-  max-width: 450px;
   background: var(--card-bg);
   border-radius: 16px;
   box-shadow: var(--shadow-sm);
@@ -904,11 +901,12 @@ footer a:hover {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  transition: all 0.4s var(--ease-smooth);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  transition: all 0.4s var(--ease-elegant);
+  backdrop-filter: blur(12px) saturate(130%) brightness(105%);
+  -webkit-backdrop-filter: blur(12px) saturate(130%) brightness(105%);
   position: relative;
   overflow: hidden;
+  height: 100%;
 }
 
 .about-card-adv::before {
@@ -939,20 +937,7 @@ footer a:hover {
   opacity: 1;
 }
 
-/* Specific Card Styles for Asymmetric Layout */
-.about-card-mission {
-  margin-top: calc(var(--spacing-unit) * 3);
-}
-
-.about-card-diff {
-  margin-top: 0;
-  border-color: var(--border-accent);
-  box-shadow: var(--shadow-accent);
-}
-
-.about-card-vision {
-  margin-top: calc(var(--spacing-unit) * 5);
-}
+/* Removed asymmetric card positioning - all cards now aligned */
 
 .about-card-title {
   font-size: 1.35rem;
@@ -1093,22 +1078,22 @@ footer a:hover {
 
 .principles-grid-adv {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: calc(var(--spacing-unit) * 5);
+  grid-template-columns: repeat(3, 1fr);
+  gap: calc(var(--spacing-unit) * 4);
   margin-top: calc(var(--spacing-unit) * 6);
-  max-width: 1000px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .principles-list-adv {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: calc(var(--spacing-unit) * 5);
+  grid-template-columns: repeat(3, 1fr);
+  gap: calc(var(--spacing-unit) * 4);
   margin: calc(var(--spacing-unit) * 6) auto 0;
   padding: 0;
   list-style: none;
-  max-width: 1000px;
+  max-width: 1200px;
 }
 
 .principle-card-adv {
@@ -1189,13 +1174,6 @@ footer a:hover {
   .about-cards-asym {
     grid-template-columns: 1fr;
     gap: calc(var(--spacing-unit) * 4);
-    max-width: 600px;
-  }
-
-  .about-card-mission,
-  .about-card-diff,
-  .about-card-vision {
-    margin-top: 0;
   }
 
   .about-cards-flex {
@@ -1213,7 +1191,7 @@ footer a:hover {
   }
 
   .principles-list-adv {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: calc(var(--spacing-unit) * 3);
   }
 }
