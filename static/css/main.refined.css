@@ -1003,11 +1003,11 @@ footer a:hover {
 }
 
 .timeline-steps-adv {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: calc(var(--spacing-unit) * 4);
-  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .timeline-step-adv {
@@ -1016,8 +1016,6 @@ footer a:hover {
   box-shadow: var(--shadow-sm);
   border: 1px solid var(--border-subtle);
   padding: calc(var(--spacing-unit) * 5);
-  min-width: 240px;
-  max-width: 280px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1095,32 +1093,30 @@ footer a:hover {
 
 .principles-grid-adv {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: calc(var(--spacing-unit) * 4);
+  grid-template-columns: repeat(2, 1fr);
+  gap: calc(var(--spacing-unit) * 5);
   margin-top: calc(var(--spacing-unit) * 6);
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .principles-list-adv {
-  display: flex;
-  flex-direction: row;
-  gap: calc(var(--spacing-unit) * 4);
-  justify-content: center;
-  align-items: stretch;
-  flex-wrap: wrap;
-  margin: calc(var(--spacing-unit) * 6) 0 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: calc(var(--spacing-unit) * 5);
+  margin: calc(var(--spacing-unit) * 6) auto 0;
   padding: 0;
   list-style: none;
+  max-width: 1000px;
 }
 
 .principle-card-adv {
-  flex: 1 1 240px;
-  min-width: 240px;
-  max-width: 360px;
   background: var(--card-bg);
-  border-radius: 14px;
+  border-radius: 16px;
   box-shadow: var(--shadow-sm);
   border: 1px solid var(--border-subtle);
-  padding: calc(var(--spacing-unit) * 4);
+  padding: calc(var(--spacing-unit) * 5);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -1212,24 +1208,13 @@ footer a:hover {
   }
 
   .timeline-steps-adv {
-    flex-direction: column;
+    grid-template-columns: repeat(2, 1fr);
     gap: calc(var(--spacing-unit) * 3);
-    align-items: center;
-  }
-
-  .timeline-step-adv {
-    max-width: 500px;
-    width: 100%;
   }
 
   .principles-list-adv {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     gap: calc(var(--spacing-unit) * 3);
-    align-items: stretch;
-  }
-
-  .principle-card-adv {
-    max-width: 100%;
   }
 }
 
@@ -1254,6 +1239,14 @@ footer a:hover {
 
   .team-list {
     gap: calc(var(--spacing-unit) * 3);
+  }
+
+  .timeline-steps-adv {
+    grid-template-columns: 1fr;
+  }
+
+  .principles-list-adv {
+    grid-template-columns: 1fr;
   }
 }
 
